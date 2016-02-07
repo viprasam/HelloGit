@@ -1,2 +1,0 @@
-# HelloGit
-DS Algo
