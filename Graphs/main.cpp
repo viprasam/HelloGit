@@ -1,38 +1,25 @@
-#include <iostream>
-#include "Graph.h"
+/*
 
+Author : Siddheshwar P Sharma
+Date   : 6th Feb 2016
 
-using namespace std;
-int main()
-{
+*/
 
-MyGraph G(11);
-G.AddEdge(0,2);
-G.AddEdge(0,3);
-G.AddEdge(0,4);
-G.AddEdge(1,3);
-G.AddEdge(1,5);
-G.AddEdge(2,6);
-G.AddEdge(3,4);
-G.AddEdge(3,7);
-G.AddEdge(4,7);
-G.AddEdge(4,8);
-G.AddEdge(5,10);
-G.AddEdge(7,9);
-G.AddEdge(7,10);
-G.AddEdge(6,7);
-G.AddEdge(8,7);
-G.AddEdge(5,4);
-//G.AddEdge(5,10);
+#include "graph_implementation.h"
 
-
-G.PrintMyGraph();
-if((G.PathHaiKya(0,5)))//,Visited)
-    cout<<"\nYES";
-else cout<<"\nNO";
-
-cout<<"\n";
-return 0;
-
-
+// Function to take input, drive the graph and give output
+int main(){
+	Graph g(5);
+	g.insert_edges(0,4);		
+	g.insert_edges(1,3);		
+	g.insert_edges(2,1);		
+	g.insert_edges(3,3);		
+	g.insert_edges(3,2);		
+	g.insert_edges(4,3);		
+	g.insert_edges(3,0);		
+	g.insert_edges(2,0);		
+	g.insert_edges(1,4);
+	g.print_adj_graph();		
+	cout<<endl;
+	return 0;
 }
